@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overwatch Team Builder</title>
+  <script src="script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4 text-center">Overwatch 5th Hero Picker</h1>
+    <p class="mb-4 text-center">Select your 4 teammates to get a recommendation for the 5th hero.</p>
+
+    <div class="grid grid-cols-1 gap-4">
+      <select id="hero1" class="p-2 rounded text-black"></select>
+      <select id="hero2" class="p-2 rounded text-black"></select>
+      <select id="hero3" class="p-2 rounded text-black"></select>
+      <select id="hero4" class="p-2 rounded text-black"></select>
+    </div>
+
+    <button onclick="recommendHero()" class="mt-6 w-full bg-blue-600 hover:bg-blue-700 p-2 rounded">
+      Get Recommendation
+    </button>
+
+    <div id="output" class="mt-6 p-4 bg-gray-800 rounded shadow"></div>
+  </div>
+</body>
+</html>
