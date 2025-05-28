@@ -2,28 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overwatch Team Builder</title>
-  <script src="script.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Overwatch Hero Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f0f4f8;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #result {
+      background: #fff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white min-h-screen p-6">
-  <div class="max-w-2xl mx-auto">
-    <h1 class="text-3xl font-bold mb-4 text-center">Overwatch 5th Hero Picker</h1>
-    <p class="mb-4 text-center">Select your 4 teammates to get a recommendation for the 5th hero.</p>
+<body>
 
-    <div class="grid grid-cols-1 gap-4">
-      <select id="hero1" class="p-2 rounded text-black"></select>
-      <select id="hero2" class="p-2 rounded text-black"></select>
-      <select id="hero3" class="p-2 rounded text-black"></select>
-      <select id="hero4" class="p-2 rounded text-black"></select>
-    </div>
+  <h1>Overwatch Hero Recommendation</h1>
 
-    <button onclick="recommendHero()" class="mt-6 w-full bg-blue-600 hover:bg-blue-700 p-2 rounded">
-      Get Recommendation
-    </button>
+  <p>Select the four heroes your teammates are playing:</p>
 
-    <div id="output" class="mt-6 p-4 bg-gray-800 rounded shadow"></div>
-  </div>
+  <select id="hero1"></select>
+  <select id="hero2"></select>
+  <select id="hero3"></select>
+  <select id="hero4"></select>
+
+  <button onclick="getRecommendation()">Get Recommendation</button>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
